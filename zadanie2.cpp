@@ -5,8 +5,7 @@ using namespace std;
 class Node
 {
 	public:
-		Node();
-		Node(int _data);
+		Node(int _data = 0);
 		~Node();
 		 
 	public:
@@ -17,15 +16,7 @@ class Node
 			index;
 };
 
-Node::Node()
-{
-	next = NULL;
-
-	data  = 0;
-	index = 0;
-}
-
-Node::Node(int _data)
+Node::Node(int _data = 0)
 {
 	next = NULL;
 
