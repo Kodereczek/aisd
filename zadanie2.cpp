@@ -43,8 +43,8 @@ class List
 
 		bool HasNext();
 
-		void GotoHead();
-		void GotoTail();
+		void GoToHead();
+		void GoToTail();
 
 		Node *FindByData(int _data);
 		Node *FindByIndex(int _index);
@@ -94,19 +94,19 @@ bool List::HasNext()
 	else                      return false;
 }
 
-void List::GotoHead()
+void List::GoToHead()
 {
 	current = head;
 }
 
-void List::GotoTail()
+void List::GoToTail()
 {
 	current = tail;
 }
 
 Node* List::FindByData(int _data)
 {
-	GotoHead();
+	GoToHead();
 
 	while(current->next != NULL && current->data != _data) Next();
 
@@ -115,7 +115,7 @@ Node* List::FindByData(int _data)
 
 Node* List::FindByIndex(int _index)
 {
-	GotoHead();
+	GoToHead();
 
 	while(current->next != NULL && current->index != _index) Next();
 
