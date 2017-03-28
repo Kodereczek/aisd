@@ -9,7 +9,8 @@ class Node
 		~Node();
 		 
 	public:
-		Node *next;
+		Node 
+			*next;
 
 		int
 			data,
@@ -58,7 +59,7 @@ class List
 			*current,
 			*tail;
 
-		int
+		int 
 			allNodes;
 };
 
@@ -107,8 +108,7 @@ Node* List::FindByData(int _data)
 {
 	GotoHead();
 
-	while (current->next != NULL && current->data != _data)
-		Next();
+	while(current->next != NULL && current->data != _data) Next();
 
 	return current;
 }
@@ -117,8 +117,7 @@ Node* List::FindByIndex(int _index)
 {
 	GotoHead();
 
-	while (current->next != NULL && current->index != _index)
-		Next();
+	while(current->next != NULL && current->index != _index) Next();
 
 	return current;
 }
@@ -133,7 +132,7 @@ void List::Add(Node *_node)
 
 	allNodes++;
 
-	while (_node->next != NULL)
+	while(_node->next != NULL)
 	{
 		_node = _node->next;
 		_node->index++;
@@ -184,10 +183,8 @@ int main()
 	list->Add(node2);
 	list->Add(node5);
 
-	for(int i = 1; i <= list->allNodes; i++)
-		cout << list->FindByIndex(i)->data << "\n";
+	for(int i = 1; i <= list->allNodes; i++) cout << list->FindByIndex(i)->data << "\n";
 	
-
 	delete list;
 
 	getchar();
