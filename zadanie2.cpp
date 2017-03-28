@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class Node
+typedef struct Node
 {
 	public:
 		Node(int _data = 0);
@@ -15,9 +15,9 @@ class Node
 		int
 			data,
 			index;
-};
+} Node;
 
-Node::Node(int _data = 0)
+Node::Node(int _data)
 {
 	next = NULL;
 
